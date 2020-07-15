@@ -1,4 +1,7 @@
 import React from 'react';
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 const Recipe = ({title,calories,image,ingredients}) => {
     return(
@@ -9,7 +12,7 @@ const Recipe = ({title,calories,image,ingredients}) => {
                 <li>{ingredients.text}</li>
                     ))}
             </ol>
-            <p>{calories}</p>
+            <p>Calories: {numberWithCommas(Math.round(calories))}</p>
             <img src={image} alt=""/>
         </div>
     )
