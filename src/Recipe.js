@@ -7,7 +7,9 @@ function numberWithCommas(x) {
 const Recipe = ({title,calories,image,ingredients}) => {
     return(
         <div className={style.recipe}>
+            <div className={style.header}>
             <h1>{title}</h1>
+            </div>
             <ol>
                 {ingredients.map(ingredients=>(
                 <li>{ingredients.text}</li>

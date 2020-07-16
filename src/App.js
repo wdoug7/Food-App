@@ -17,7 +17,7 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [query,setQuery] = useState('chicken');
+  const [query,setQuery] = useState('');
 
   useEffect( () => {
   getRecipes(); 
@@ -46,6 +46,7 @@ const App = () => {
       <input 
       className="search-bar" 
       type="text"
+      placeholder = "Search for Recipes Here"
        value={search} 
        onChange={updateSearch} 
       /> 
